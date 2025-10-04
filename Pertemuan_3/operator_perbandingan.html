@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Perbandingan</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1{
+            color: rgb(57, 55, 55)
+        }
+        .container{
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .output{
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: monospace;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Demo Operator Perbandingan</h1>
+        <div class="output" id="hasil"></div>
+    </div>
+
+    <script>
+        let a = 10;
+        let b = 20;
+
+        // operator perbandingan
+        let hasil1 = a == b;
+        let hasil2 = a != b;
+        let hasil3 = a > b;
+        let hasil4 = a < b;
+        let hasil5 = a >= b;
+        let hasil6 = a <= b;
+        let hasil7 = a === b;
+
+        document.getElementById("hasil").innerHTML = `
+            a == b : ${hasil1} <br>
+            a != b : ${hasil2} <br>
+            a > b : ${hasil3} <br>
+            a < b : ${hasil4} <br>
+            a >= b : ${hasil5} <br>
+            a <= b : ${hasil6} <br>
+            a === b : ${hasil7} <br>
+        `;
+    </script>
+</body>
+</html>
