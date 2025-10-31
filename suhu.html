@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Konversi Suhu</title>
+  <style>
+    body{font-family:Arial;background:#f5f5f5;text-align:center;padding:30px}
+    input,select,button{padding:8px;margin:5px}
+    #hasil{margin-top:10px;font-weight:bold}
+  </style>
+</head>
+<body>
+  <h2>Konversi Suhu</h2>
+  <input id="nilai" type="number" placeholder="Masukkan suhu">
+  <select id="jenis">
+    <option value="CtoF">Celsius → Fahrenheit</option>
+    <option value="FtoC">Fahrenheit → Celsius</option>
+  </select>
+  <button onclick="konversi()">Konversi</button>
+
+  <div id="hasil">Hasil: -</div>
+
+  <script>
+    function toFahrenheit(c){ return (c * 9/5) + 32; }
+    function toCelsius(f){ return (f - 32) * 5/9; }
+
+    function konversi(){
+      const val = parseFloat(document.getElementById('nilai').value);
+      const jenis = document.getElementById('jenis').value;
+      let hasil;
+
+      if(jenis === 'CtoF') hasil = toFahrenheit(val);
+      else hasil = toCelsius(val);
+
+      document.getElementById('hasil').textContent = 'Hasil: ' + hasil.toFixed(2);
+    }
+  </script>
+</body>
+</html>
